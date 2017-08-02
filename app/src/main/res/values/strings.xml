@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Organizer</string>
+    <string name="findContact">Find Contact</string>
+    <string name="nameOfContact">Name</string>
+    <string name="numberOfPhone">Number</string>
+    <string name="missingCalls">Missing calls</string>
+    <string name="incomingCalls">Incoming calls</string>
+    <string name="outgoingCalls">Outgoing calls</string>
+</resources>
