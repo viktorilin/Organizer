@@ -9,11 +9,13 @@ import android.widget.ImageView;
 
 public class Contact {
 
+    private Integer id;
+
     private String name;
 
     private String numberOfPhone;
 
-    private Integer image;
+    private int image;
 
     //img
     //melody
@@ -23,6 +25,13 @@ public class Contact {
 
 
     public Contact(String name, String numberOfPhone, Integer image) {
+        this.name = name;
+        this.numberOfPhone = numberOfPhone;
+        this.image = image;
+    }
+
+    public Contact(Integer id, String name, String numberOfPhone, int image) {
+        this.id = id;
         this.name = name;
         this.numberOfPhone = numberOfPhone;
         this.image = image;
@@ -44,11 +53,19 @@ public class Contact {
         this.numberOfPhone = numberOfPhone;
     }
 
-    public Integer getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(Integer image) {
+    public void setImage(int image) {
         this.image = image;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

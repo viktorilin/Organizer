@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -56,7 +55,7 @@ public class ContactAdapterRecycleView
 
         public CardViewHolder(View itemView) {
             super(itemView);
-            contactNameTextView = (TextView) itemView.findViewById(R.id.contact_name);
+            contactNameTextView = itemView.findViewById(R.id.contact_name);
             contactNumberOfPhoneTextView = (TextView) itemView.findViewById(R.id.contact_number);
             contactImageView = (ImageView) itemView.findViewById(R.id.contact_photo);
         }

@@ -6,4 +6,8 @@
     <string name="missingCalls">Missing calls</string>
     <string name="incomingCalls">Incoming calls</string>
     <string name="outgoingCalls">Outgoing calls</string>
+    <string name="findNotification">Find Notification</string>
+    <string name="notification_add_title_text_view">Input title</string>
+    <string name="notification_add_description_editTxt">Input description</string>
+    <string name="notification_pick_date">Pick date</string>
 </resources>
