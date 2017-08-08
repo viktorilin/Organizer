@@ -1,43 +1,44 @@
 package com.example.asus.organizer;
 
+    import com.activeandroid.Model;
+    import com.activeandroid.annotation.Column;
+    import com.activeandroid.annotation.Table;
+
     import java.util.Date;
 
 /**
  * Created by Asus on 02.08.2017.
  */
+@Table(name = "Notification")
+public class Notification extends Model {
 
-public class Notification {
 
-    private Integer id;
-
+    @Column(name = "Description")
     private String description;
 
+    @Column(name = "Title")
     private String title;
 
+    @Column(name = "Date")
     private Date date;
 
+    @Column(name = "Melody")
     private String melody;
 
+    @Column(name = "Image")
     private Integer image;
 
-    public Notification(Integer id, String description, String title, Date date, String melody, Integer image) {
-        this.id = id;
+
+
+    public Notification() {
+    }
+
+    public Notification(String description, String title, Date date, String melody, Integer image) {
         this.description = description;
         this.title = title;
         this.date = date;
         this.melody = melody;
         this.image = image;
-    }
-
-    public Notification() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getDescription() {

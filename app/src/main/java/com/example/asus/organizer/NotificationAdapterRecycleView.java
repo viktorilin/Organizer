@@ -1,5 +1,6 @@
 package com.example.asus.organizer;
 
+import android.content.ClipData;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import java.util.List;
 
 public class NotificationAdapterRecycleView extends
         RecyclerView.Adapter<NotificationAdapterRecycleView.CardViewHolder>{
+
+    public View view;
 
     List<Notification> notifications;
 
@@ -32,8 +35,8 @@ public class NotificationAdapterRecycleView extends
     public void onBindViewHolder(NotificationAdapterRecycleView.CardViewHolder holder, int position) {
         Notification notification = notifications.get(position);
         holder.notificationDescriptionTextView.setText(notification.getDescription());
-        holder. notificationTitleTextView.setText(notification.getTitle());
-        holder. notificationImageView.setImageResource( notification.getImage());
+        holder.notificationTitleTextView.setText(notification.getTitle());
+        holder.notificationImageView.setImageResource( notification.getImage());
         holder.notificationDateTextView.setText(notification.getDate().toString());
     }
     public void removeItem(int position){
@@ -54,15 +57,25 @@ public class NotificationAdapterRecycleView extends
         protected TextView notificationDescriptionTextView;
         protected ImageView  notificationImageView;
         protected TextView notificationDateTextView;
+        public ClipData.Item currentItem;
 
-        public CardViewHolder(View itemView) {
+
+
+        public CardViewHolder(final View itemView) {
             super(itemView);
             notificationTitleTextView = (TextView) itemView.findViewById(R.id.notification_title);
             notificationDescriptionTextView = (TextView) itemView.findViewById(R.id.notification_description);
             notificationDateTextView = (TextView) itemView.findViewById(R.id.notification_date);
             notificationImageView = (ImageView) itemView.findViewById(R.id.notification_photo);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    System.out.println("Hello world");
+                }
+            });
         }
 
-
     }
+
 }
