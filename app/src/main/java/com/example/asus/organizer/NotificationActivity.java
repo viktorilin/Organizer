@@ -45,7 +45,6 @@ public class NotificationActivity extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
 
-
         final NotificationDAO notificationDAO = new NotificationDAO();
 
         final View view = inflater.inflate(R.layout.activity_notification, null);
